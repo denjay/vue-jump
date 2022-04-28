@@ -1,0 +1,80 @@
+{
+	"name": "vue-jump",
+	"displayName": "vue jump",
+	"description": "Quickly jump to template, script and style tag in vue file",
+	"icon": "assets/vue-jump.png",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.66.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/denjay/vue-jump.git"
+	},
+	"activationEvents": [
+		"onCommand:vue-jump.jumpToTemplate",
+		"onCommand:vue-jump.jumpToScript",
+		"onCommand:vue-jump.jumpToStyle"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "vue-jump.jumpToTemplate",
+				"title": "Jump to template tag"
+			},
+			{
+				"command": "vue-jump.jumpToScript",
+				"title": "Jump to script tag"
+			},
+			{
+				"command": "vue-jump.jumpToStyle",
+				"title": "Jump to style tag"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "vue-jump.jumpToTemplate",
+				"key": "ctrl+alt+1",
+				"mac": "cmd+alt+1",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "vue-jump.jumpToScript",
+				"key": "ctrl+alt+2",
+				"mac": "cmd+alt+2",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "vue-jump.jumpToStyle",
+				"key": "ctrl+alt+3",
+				"mac": "cmd+alt+3",
+				"when": "editorTextFocus"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.66.0",
+		"@types/glob": "^7.2.0",
+		"@types/mocha": "^9.1.0",
+		"@types/node": "14.x",
+		"@typescript-eslint/eslint-plugin": "^5.16.0",
+		"@typescript-eslint/parser": "^5.16.0",
+		"eslint": "^8.11.0",
+		"glob": "^7.2.0",
+		"mocha": "^9.2.2",
+		"typescript": "^4.5.5",
+		"@vscode/test-electron": "^2.1.3"
+	}
+}
