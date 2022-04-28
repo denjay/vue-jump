@@ -1,7 +1,8 @@
 {
 	"name": "vue-jump",
 	"displayName": "vue jump",
-	"description": "Quickly jump to template, script and style tag in vue file",
+  "publisher": "denjay",
+  "description": "Quickly jump to template, script and style tag in vue file",
 	"icon": "assets/vue-jump.png",
 	"version": "0.0.1",
 	"engines": {
