@@ -4,7 +4,7 @@
 	"publisher": "denjay",
 	"description": "Quickly jump to template, script and style tag in vue file",
 	"icon": "assets/vue-jump.png",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"engines": {
 		"vscode": "^1.66.0"
 	},
@@ -16,41 +16,39 @@
 		"url": "https://github.com/denjay/vue-jump.git"
 	},
 	"activationEvents": [
-		"onCommand:vue-jump.jumpToTemplate",
-		"onCommand:vue-jump.jumpToScript",
-		"onCommand:vue-jump.jumpToStyle"
+		"onStartupFinished"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "vue-jump.jumpToTemplate",
+				"command": "vue-jump.template",
 				"title": "Jump to template tag"
 			},
 			{
-				"command": "vue-jump.jumpToScript",
+				"command": "vue-jump.script",
 				"title": "Jump to script tag"
 			},
 			{
-				"command": "vue-jump.jumpToStyle",
+				"command": "vue-jump.style",
 				"title": "Jump to style tag"
 			}
 		],
 		"keybindings": [
 			{
-				"command": "vue-jump.jumpToTemplate",
+				"command": "vue-jump.template",
 				"key": "ctrl+alt+1",
 				"mac": "cmd+alt+1",
 				"when": "editorTextFocus"
 			},
 			{
-				"command": "vue-jump.jumpToScript",
+				"command": "vue-jump.script",
 				"key": "ctrl+alt+2",
 				"mac": "cmd+alt+2",
 				"when": "editorTextFocus"
 			},
 			{
-				"command": "vue-jump.jumpToStyle",
+				"command": "vue-jump.style",
 				"key": "ctrl+alt+3",
 				"mac": "cmd+alt+3",
 				"when": "editorTextFocus"

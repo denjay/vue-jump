@@ -4,6 +4,6 @@ All notable changes to the "vue-jump" extension will be documented in this file.
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
-## [Unreleased]
+## [v0.0.3]-2024/02/06
 
-- Initial release
+- Add status bar button
