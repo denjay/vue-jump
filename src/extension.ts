@@ -12,8 +12,8 @@ export function activate({ subscriptions }: vscode.ExtensionContext) {
   // This line of code will only be executed once when your extension is activated
   console.log('Congratulations, your extension "vue-jump" is now active!');
 
-  const tagArr = ['template', 'script', 'style'];
-  tagArr.forEach(tag => {
+  const tagArr = ["template", "script", "style"];
+  tagArr.forEach((tag) => {
     const myCommandId = `vue-jump.${tag}`;
     subscriptions.push(
       vscode.commands.registerCommand(myCommandId, () => {
@@ -23,8 +23,7 @@ export function activate({ subscriptions }: vscode.ExtensionContext) {
 
     // create a new status bar item that we can now manage
     const myStatusBarItem = vscode.window.createStatusBarItem(
-      vscode.StatusBarAlignment.Left,
-      100
+      vscode.StatusBarAlignment.Left
     );
     myStatusBarItem.command = myCommandId;
     myStatusBarItem.text = tag;
@@ -41,7 +40,7 @@ export function activate({ subscriptions }: vscode.ExtensionContext) {
 }
 
 function updateStatusBarItem() {
-  if (vscode.window.activeTextEditor?.document.languageId === 'vue') {
+  if (vscode.window.activeTextEditor?.document.languageId === "vue") {
     myStatusBarlist.forEach((item) => {
       item.show();
     });
