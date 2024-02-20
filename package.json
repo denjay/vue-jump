@@ -4,7 +4,7 @@
 	"publisher": "denjay",
 	"description": "Quickly jump to template, script and style tag in vue file",
 	"icon": "assets/vue-jump.png",
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"engines": {
 		"vscode": "^1.86.0"
 	},
@@ -51,6 +51,24 @@
 				"command": "vue-jump.style",
 				"key": "ctrl+alt+3",
 				"mac": "cmd+alt+3",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "vue-jump.template",
+				"key": "ctrl+alt+numpad1",
+				"mac": "cmd+alt+numpad1",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "vue-jump.script",
+				"key": "ctrl+alt+numpad2",
+				"mac": "cmd+alt+numpad2",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "vue-jump.style",
+				"key": "ctrl+alt+numpad3",
+				"mac": "cmd+alt+numpad3",
 				"when": "editorTextFocus"
 			}
 		]
